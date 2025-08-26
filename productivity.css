@@ -1,0 +1,288 @@
+/* ===== General Page Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000000;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+header {
+  background: #7b0a0a;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 8px 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav button {
+  background: #fff;
+  color: #7b0a0a;
+  border: none;
+  margin: 0.3rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+nav button:hover {
+  background: #ffcccc;
+  transform: translateY(-2px);
+}
+
+nav button.active {
+  background: #a20f0f;
+  color: #fff;
+}
+
+/* ===== Main Container ===== */
+main {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 3rem;
+}
+
+/* ===== Card Styling ===== */
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+.card {
+  background: #ffffff;
+  color: #000;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #7b0a0a;
+  font-size: 2rem;
+  border-bottom: 2px solid #7b0a0a;
+  padding-bottom: 0.4rem;
+}
+
+/* ===== Task Tabs ===== */
+.task-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.task-tabs .tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 12px;
+  border: 2px solid #7b0a0a;
+  background: #fff;
+  color: #7b0a0a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task-tabs .tab:hover {
+  background: #ffe6e6;
+}
+
+.task-tabs .tab.active {
+  background: #7b0a0a;
+  color: #fff;
+  border-color: #a20f0f;
+}
+
+/* ===== Task Input ===== */
+.task-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.task-input input {
+  padding: 14px;
+  border: 1px solid #7b0a0a;
+  border-radius: 12px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 180px;
+  background: #fff;
+  color: #000;
+}
+
+.task-input button {
+  padding: 12px 20px;
+  border: none;
+  background: #7b0a0a;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.task-input button:hover {
+  background: #a20f0f;
+  transform: translateY(-1px);
+}
+
+/* ===== Task List ===== */
+#taskList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#taskList li {
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  background: #ffe6e6;
+  color: #7b0a0a;
+  transition: 0.2s;
+}
+
+#taskList li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#taskList li button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== Pomodoro Timer ===== */
+#timerDisplay {
+  font-size: 12rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: bold;
+  color: #7b0a0a;
+}
+
+#timer button {
+  background: #7b0a0a;
+  border: none;
+  color: #fff;
+  padding: 30px 195px;
+  margin: 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+
+#timer button:hover {
+  background: #a20f0f;
+  transform: translateY(-1px);
+}
+
+/* ===== Timetable ===== */
+#timetable input, #timetable button {
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 12px;
+  border: 1px solid #7b0a0a;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+}
+
+#generateTimetable {
+  background: #7b0a0a;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#generateTimetable:hover {
+  background: #a20f0f;
+  transform: translateY(-1px);
+}
+
+/* Timetable Output */
+#timetableOutput {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: #ffe6e6;
+  border-radius: 20px;
+}
+
+#timetableOutput .activity, #timetableOutput .break {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #7b0a0a;
+}
+
+#timetableOutput .activity {
+  background: linear-gradient(90deg, #ffb3b3, #ffa6a6);
+}
+
+#timetableOutput .break {
+  background: linear-gradient(90deg, #ffcc99, #ffb366);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background: #7b0a0a;
+  color: #fff;
+  font-size: 1rem;
+}

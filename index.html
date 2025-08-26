@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="productivity.css">
+</head>
+<body>
+  <header>
+    <h1>Productivity App</h1>
+    <p>Stay organized, focused, and productive!</p>
+    <nav>
+      <button data-target="tasks" class="active">Tasks</button>
+      <button data-target="timer">Pomodoro</button>
+      <button data-target="timetable">Timetable</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tasks Section -->
+    <section id="tasks" class="active card">
+      <h2>Task List</h2>
+      <div class="task-tabs">
+        <div class="tab active" data-filter="all">All</div>
+        <div class="tab" data-filter="pending">Pending</div>
+        <div class="tab" data-filter="completed">Completed</div>
+        <div class="tab" data-filter="today">Today</div>
+      </div>
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter a task...">
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Pomodoro Timer Section -->
+    <section id="timer" class="card">
+      <h2>Pomodoro Timer</h2>
+      <div id="timerDisplay">25:00</div>
+      <button id="startPomodoro">Start</button>
+      <button id="pausePomodoro">Pause</button>
+      <button id="resetPomodoro">Reset</button>
+    </section>
+
+    <!-- Timetable Section -->
+    <section id="timetable" class="card">
+      <h2>Timetable Generator</h2>
+      <label>Start Time: <input type="time" id="startTime" value="09:00"></label>
+      <label>End Time: <input type="time" id="endTime" value="17:00"></label>
+      <label>Number of Breaks: <input type="number" id="numBreaks" value="2" min="0"></label>
+      <form id="timetableForm">
+        <input type="text" id="activity" placeholder="Activity" required>
+        <input type="number" id="duration" placeholder="Duration (minutes)" required>
+        <button type="submit">Add Activity</button>
+      </form>
+      <button id="generateBtn">Generate Timetable</button>
+      <button id="exportBtn">Export Timetable</button>
+      <div id="timetableOutput"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Productivity App</p>
+  </footer>
+
+  <script src="productivity.js"></script>
+</body>
+</html>
